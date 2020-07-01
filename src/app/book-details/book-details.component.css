@@ -1,0 +1,12 @@
+.main-div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .mat-form-field {
+    margin: 5px;
+  }
+

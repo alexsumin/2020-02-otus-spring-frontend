@@ -1,0 +1,39 @@
+<div class="main-div">
+  <mat-card>
+      <form novalidate [formGroup]="bookForm" (ngSubmit)="submit()">
+        <mat-card-header>
+          <mat-card-title><h2>Add book</h2></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+  
+          <mat-form-field appearance="fill">
+              <mat-label>Title</mat-label>
+              <input matInput placeholder="Title" required name="title" #title formControlName="title">
+            </mat-form-field>
+        
+            <mat-form-field appearance="fill">
+              <mat-label>Published</mat-label>
+              <input matInput placeholder="Published" required name="published" #published formControlName="published">
+            </mat-form-field>
+            
+            <br>
+  
+            <mat-form-field appearance="fill" formGroupName="author">
+              <mat-label>Author</mat-label>
+              <input matInput placeholder="Author" required type="Author" name="author.name" #author formControlName="name">
+            </mat-form-field>
+        
+            <mat-form-field appearance="fill" formGroupName="genre">
+              <mat-label>Genre</mat-label>
+              <input matInput placeholder="Genre"  required type="Genre" name="genre.name" #genre formControlName="name">
+            </mat-form-field>
+            <br>
+  
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Save</button>
+          <a mat-button routerLink="/books">Cancel</a>
+        </mat-card-actions>
+      </form>
+    </mat-card>
+    </div>
